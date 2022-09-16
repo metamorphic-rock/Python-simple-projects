@@ -13,7 +13,9 @@ def evaluate_cal_string():
     calculation=str(eval(calculation))
     text_display.delete(0,tk.END)
     text_display.insert(tk.END,calculation)
-def delete():
+def delete():       
+    global calculation
+    calculation=calculation[:-1]                 
     len_cal=len(text_display.get())
     text_display.delete(len_cal-1,tk.END)
 def clear():
